@@ -2,6 +2,8 @@ import openai
 import streamlit as st
 from streamlit_chat import message
 
+st.set_page_config(page_title="ChatGPT Bot", page_icon=":robot_face:")
+
 openai.api_key = st.secrets['pass']
 if 'prompts' not in st.session_state:
     st.session_state['prompts'] = [{"role": "system", "content": "You are a helpful assistant. Answer as concisely as possible with a little humor expression."}]
